@@ -1,0 +1,6 @@
+program_options:
+  tray: auto
+  notify: true
+  automount: true
+  file_manager: dolphin
+

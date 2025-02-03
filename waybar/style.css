@@ -1,0 +1,321 @@
+/*********************
+ * COLORS
+**********************/
+
+@define-color text rgb(205, 214, 244);
+@define-color black rgb(17, 17, 27);
+@define-color red rgb(243, 139, 168);
+@define-color lavander rgb(180, 190, 254);
+@define-color white rgb(255, 255, 255);
+@define-color yellow rgb(249, 226, 175);
+@define-color sapphire rgb(116, 199, 236);
+@define-color green rgb(166, 227, 161);
+@define-color mauve rgb(203, 166, 247);
+@define-color peach rgb(250, 179, 135);
+
+@define-color bg-black-transparent rgba(30, 30, 46, 0.95);
+@define-color workspaces-button-bg-inactive rgba(180, 190, 254, 0.25);
+@define-color workspaces-button-bg-active rgba(180, 190, 254, 0.5);
+@define-color workspaces-button-bg-urgent rgba(243, 139, 168, 0.5);
+
+@define-color bg-transparent rgba(0, 0, 0, 0.0);
+
+
+/*********************
+ * GLOBAL
+**********************/
+
+* {
+    font-family: FontAwesome,FontAwesome6, Roboto, Helvetica, Arial, sans-serif;
+    border: none;
+    border-radius: 0px;
+}
+
+window#waybar {
+    background-color: @bg-black-transparent;
+    color: @text;
+}
+
+#workspaces,
+#window,
+#clock,
+#mpris,
+#tray,
+#mdp,
+#peripherics,
+#network,
+#power-profiles-daemon,
+#system,
+#keyboard-state,
+#battery,
+#custom-notification {
+    background: transparent;
+    margin: 5px 1px 5px 1px;
+    padding: 0px 10px;
+    border-radius: 15px;
+    border: 0px;
+    font-style: normal;
+    opacity: 0.8;
+    font-size: 12px;
+    color: @text;
+}
+
+
+/**********************************************************************
+ ***** LEFT 
+***********************************************************************/
+
+/*********************
+ * CLOCK
+**********************/
+
+#clock {
+    color: @lavander;
+    font-weight: bold;
+    border: 2px solid #b4befe;
+}
+
+
+/*********************
+ * TRAY
+**********************/
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    border-bottom: 2px solid @red;
+}
+
+#tray{
+    border: 0px;
+    border-radius: 0px ;
+    border-bottom: 2px solid @lavander;
+    margin-left: 10px;
+    margin-right: 10px;
+ }
+
+
+/*********************
+ * WINDOW
+**********************/
+
+ #window {
+    color: @text;
+    background: transparent;
+    font-weight: bold;
+    border-radius:  0px;
+    border-left: 2px solid @lavander;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+}
+
+
+/**********************************************************************
+ ***** CENTER 
+***********************************************************************/
+
+/*********************
+ * WORKSPACES
+**********************/
+
+#workspaces {
+    background: transparent;
+
+    padding: 0px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-style: normal;
+    opacity: 0.8;
+    font-size: 12px;
+    color: @text;
+    
+}
+
+#workspaces button {
+    background-color: @bg-transparent;
+    opacity: 0.5;
+
+    padding: 0px 5px;
+    border-radius: 15px;
+    border: 0px;
+    font-weight: bold;
+    font-style: normal;
+
+    color: @text;
+    transition: all 0.15s ease-in-out;
+}
+
+#workspaces button.active {
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid @lavander;
+    background-color: @workspaces-button-bg-active;
+    opacity: 1;
+    transition: all 0.10s ease-in-out;
+}
+
+#workspaces button.urgent {
+    background-color: @workspaces-button-bg-urgent;
+}
+
+#workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+    color: @lavander;
+    
+}
+
+/*******************
+ * MPRIS
+*******************/
+
+#mpris {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/**********************************************************************
+ ***** RIGHT
+***********************************************************************/
+
+/*********************
+ * KEYBOARD-STATE
+**********************/
+
+#keyboard-state {
+    color: @green;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+    border-bottom: 2px solid @green;
+}
+
+#keyboard-state > label.locked {
+    color: @yellow;
+    border-radius: 0px;
+    border-bottom: 2px solid @yellow;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+
+/*********************
+ * PULSEAUDIO, BACKLIGHT
+**********************/
+
+#peripherics {
+    color: @yellow;
+    border: 2px solid @yellow;
+}
+
+
+/*********************
+ * NETWORK
+**********************/
+
+#network {
+    color: @sapphire;
+    border: 2px solid @salpphire;
+}
+
+#network.disconnected {
+    color: @red;
+    border: 2px solid @red;
+}
+
+
+/*********************
+ * CPU, MEMORY TEMPERATURE
+**********************/
+
+#system {
+    color: @mauve;
+    border: 2px solid @mauve;
+}
+
+#temperature.critical {
+    color: @red;
+}
+
+
+/*********************
+ * POWER-PROFILES
+**********************/
+
+#power-profiles-daemon {
+    padding-right: 15px;
+}
+
+#power-profiles-daemon.performance {
+    padding-right: 12px;
+    padding-left: 12px;
+    color: @red;
+    border: 2px solid @red;
+}
+
+#power-profiles-daemon.balanced {
+    padding-right: 7px;
+    padding-left: 7px;
+    color: @sapphire;
+    border: 2px solid @sapphire;
+}
+
+#power-profiles-daemon.power-saver {
+    color: @green;
+    border: 2px solid @green;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+
+/*********************
+ * BATTERY
+**********************/
+
+#battery {
+    color: @lavander;
+    border: 2px solid @lavander;
+}
+
+#battery.charging, #battery.plugged {
+    color: @green;
+    border: 2px solid @green;;
+
+}
+
+#battery.warning:not(.charging) {
+    color: @peach;
+    border: 2px solid @peach;
+}
+
+#battery.critical:not(.charging) {
+    color: @lavander;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        border: 2px solid @red;
+        color: @red;
+    }
+}
+
+
+/*********************
+ * NOTIFICATION
+**********************/
+
+#custom-notification {
+    border: 2px solid @text;
+}
+
