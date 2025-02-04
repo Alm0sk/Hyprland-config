@@ -20,7 +20,7 @@ function loop {
         rm $wallpaper_path/bg.jpg
         cp "$wallpaper" "$wallpaper_path/bg.jpg"
         waypaper --backend swww --wallpaper $wallpaper_path/bg.jpg
-        sleep 300 # Todo: add an interrupt to change wallpaper
+        sleep 600 # Todo: add an interrupt to change wallpaper
     done
 }
 
