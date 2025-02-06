@@ -5,26 +5,28 @@
         "padding": {
             "top": 1,
             "left": 2
-        }
-      
+        } 
     },
+
     "display": {
         "separator": " "
     },
+    
     "modules": [
       "break",  
         {
             "key": "{#34}{icon} {#keys}",
             "type": "os",
-            "format": "{4}"
+            "format": "{3}"
         },
         {
             "key": "{#35}󰇄 {#keys}",
-            "type": "wm"
+            "type": "wm",
+            "format": "{2} {5}"
         },
         {
             "key": "{#36}󰏔 {#keys}",
-            "type": "packages"
+            "type": "packages"          
         },
         {
             "key": "{#31} {#keys}",
@@ -43,6 +45,6 @@
             "key": "{#39}{#keys}",
             "type": "colors",
             "symbol": "circle"
-        }
+}
     ]
 }
