@@ -25,7 +25,7 @@ source $ZSH/custom/plugins/zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-s
 ###############
 
 alias up="clear && fastfetch && echo && paru -Syu"
-alias yo="clear && fastfetch && echo"
+alias c="clear && fastfetch && echo"
 alias kali="docker start kali && docker attach kali"
 alias error="echo $?"
 
