@@ -32,7 +32,8 @@ function next_wallpaper {
             current_wallpaper=$((total_wallpapers - 2))
         fi
     fi
-    if [ $current_wallpaper -ge $total_wallpapers ]; then
+    # If the current index isn't logic, reset to 0
+    if [ $current_wallpaper -ge $total_wallpapers -o $current_wallpaper -lt 0 ]; then
         current_wallpaper=0
     fi
     rm -f "$wallpaper_path/bg.jpg"
