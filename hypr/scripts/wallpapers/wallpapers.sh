@@ -1,6 +1,6 @@
 #!/bin/bash
 
 while true; do
-    ./next_wallpaper.sh
     sleep 10m
+    ./next_wallpaper.sh
 done
