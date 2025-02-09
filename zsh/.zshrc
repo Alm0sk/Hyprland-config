@@ -5,33 +5,27 @@
 # Path to Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Path to my configuration files.
+export ZSH_CONF="$HOME/.config/dots/zsh"
+
 ################
 ### Plugins ###
 ###############
 
-plugins=(
-    git
-    colored-man-pages
-    zsh-syntax-highlighting
-)
-
-source $ZSH/oh-my-zsh.sh
-
-source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $ZSH/custom/plugins/zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
+source $ZSH_CONF/plugins_conf.sh
 
 ###############
 ### Aliases ###
 ###############
 
-alias up="clear && fastfetch && echo && paru -Syu"
-alias c="clear && fastfetch && echo"
-alias kali="docker start kali && docker attach kali"
-alias error="echo $?"
+source $ZSH_CONF/aliases.sh
 
-# Starship
+################
+### Starship ###
+################
+
 export STARSHIP_CONFIG=~/.config/dots/starship/starship.toml
 eval "$(starship init zsh)"
 
-# Fastfetch on shell startup
+# Exec on shell startup
 fastfetch && echo
