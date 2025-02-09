@@ -10,7 +10,7 @@ eza_params=(
 '--time-style=long-iso' '--header'
 )
 
-alias eza='eza $eza_params'
+alias eza='eza -l $eza_params'
 
 # Docker
 alias kali="docker start kali && docker attach kali"

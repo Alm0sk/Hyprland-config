@@ -2,9 +2,13 @@ plugins=(
     git
     colored-man-pages
     zsh-syntax-highlighting
+    zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
+
+# Toggle zsh-autosuggestions with Ctrl+A
+bindkey '^A' autosuggest-toggle
 
 #########################
 ### colored-man-pages ###
