@@ -1,7 +1,7 @@
 plugins=(
     git
     colored-man-pages
-    zsh-syntax-highlighting
+    zsh-syntax-highlighting   
     zsh-autosuggestions
 )
 
@@ -29,8 +29,6 @@ less_termcap[ue]="${reset_color}"
 ###############################
 ### zsh-syntax-highlighting ###
 ###############################
-
-source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Catppuccin Mocha Theme (for zsh-syntax-highlighting)
 
