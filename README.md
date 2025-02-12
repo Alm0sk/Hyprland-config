@@ -7,8 +7,8 @@
 ### TODO
 
 - [ ] Ajouter une description
-- [/] Script de fond d'écran
-- [/] Fixer le thème de dolphin
+- [x] Script de fond d'écran
+- [x] Fixer le thème de dolphin
 - [ ] Ajouter un raccourci pour toggle la transparence
 - [ ] Personnaliser sddm
 - [ ] Personnaliser Spotify
