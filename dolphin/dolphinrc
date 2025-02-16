@@ -1,9 +1,8 @@
+MenuBar=Disabled
+
 [General]
 Version=202
 ViewPropsTimestamp=2025,2,12,21,58,15.359
-
-[UiSettings]
-ColorScheme=Kvantum
 
 [KFileDialog Settings]
 Places Icons Auto-resize=false
@@ -12,6 +11,9 @@ Places Icons Static Size=22
 [MainWindow]
 MenuBar=Disabled
 ToolBarsMovable=Disabled
+
+[UiSettings]
+ColorScheme=Kvantum
 
 [ViewPropertiesDialog]
 1920x1080 screen: Window-Maximized=true
