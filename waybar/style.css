@@ -6,6 +6,7 @@
 @define-color black rgb(17, 17, 27);
 @define-color red rgb(243, 139, 168);
 @define-color lavander rgb(180, 190, 254);
+@define-color blue rgb(137, 180, 250);
 @define-color white rgb(255, 255, 255);
 @define-color yellow rgb(249, 226, 175);
 @define-color sapphire rgb(116, 199, 236);
@@ -38,6 +39,7 @@ window#waybar {
 
 #workspaces,
 #window,
+#custom-wlogout,
 #clock,
 #mpris,
 #tray,
@@ -66,13 +68,22 @@ window#waybar {
 ***********************************************************************/
 
 /*********************
+ * WLOGOUT
+**********************/
+
+#custom-wlogout {
+    color: @lavander;
+    border: 2px solid @lavander;
+}
+
+/*********************
  * CLOCK
 **********************/
 
 #clock {
     color: @lavander;
     font-weight: bold;
-    border: 2px solid #b4befe;
+    border: 2px solid @lavander;
 }
 
 
