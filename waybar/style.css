@@ -73,7 +73,8 @@ window#waybar {
 
 #custom-wlogout {
     color: @lavander;
-    border: 2px solid @lavander;
+    border: none;
+    margin-left: 10px;
 }
 
 /*********************
