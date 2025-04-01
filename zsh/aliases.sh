@@ -14,3 +14,6 @@ alias eza='eza -l $eza_params'
 
 # Docker
 alias kali="docker start kali && docker attach kali"
+
+# SSH
+alias ssh="kitty +kitten ssh"
