@@ -23,5 +23,5 @@ alias ssh="kitty +kitten ssh"
 alias t='terraform'
 
 # git
-alias gcgm='git commit -gpg-sign -message'
+alias gcgm='git commit --gpg-sign --message'
 
