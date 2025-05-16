@@ -13,7 +13,15 @@ eza_params=(
 alias eza='eza -l $eza_params'
 
 # Docker
+alias lzd="lazydocker"
 alias kali="docker start kali && docker attach kali"
 
 # SSH
 alias ssh="kitty +kitten ssh"
+
+# Lazy aliases
+alias t='terraform'
+
+# git
+alias gcgm='git commit -gpg-sign -message'
+

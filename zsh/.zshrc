@@ -14,6 +14,13 @@ export ZSH_CONF="$HOME/.config/dots/zsh"
 
 source $ZSH_CONF/plugins_conf.sh
 
+################
+### Flutter ###
+###############
+
+export ANDROID_HOME=/opt/android-sdk/tools/bin
+export CHROME_EXECUTABLE=/usr/bin/firefox
+
 ###############
 ### Aliases ###
 ###############

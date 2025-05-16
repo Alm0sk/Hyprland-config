@@ -158,6 +158,10 @@ Unknown = " "
 Void = " "
 Windows = "󰍲 "
 
+[terraform]
+symbol = "terraform"
+format = 'via [$symbol]($style) '
+
 [package]
 symbol = "󰏗 "
 
