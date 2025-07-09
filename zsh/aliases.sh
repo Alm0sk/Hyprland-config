@@ -25,3 +25,8 @@ alias t='terraform'
 # git
 alias gcgm='git commit --gpg-sign --message'
 
+# vpn
+alias vpn-casa='sudo systemctl start openvpn-client@casa'
+
+# rasberry
+alias ssh-raspberry='ssh -i ~/.ssh/rasberry almosk@192.168.1.200'
