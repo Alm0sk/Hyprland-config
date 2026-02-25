@@ -9,7 +9,11 @@ format = '$all'
 disabled = false
 
 [aws]
-symbol = "  "
+symbol = " aws "
+
+[aws.profile_aliases]
+Production-devops_admin-207567790576 = 'Prod admin'
+ISO-devops_admin-412215358438 = 'Iso admin'
 
 [buf]
 symbol = " "
@@ -74,7 +78,7 @@ style = "bold blue"
 [hostname]
 ssh_symbol = " "
 ssh_only = false
-aliases = { "PORT00399" = " fedora", "d15720375607" = " kali" }
+aliases = { "PORT00399" = " wsl", "d15720375607" = " kali" }
 style = 'bold green'
 format = '[$ssh_symbol$hostname]($style) \['
 
@@ -86,6 +90,19 @@ symbol = " "
 
 [kotlin]
 symbol = " "
+
+[kubernetes]
+disabled = false
+style = "bold sky"
+symbol ="☸  "
+
+[[kubernetes.contexts]]
+context_pattern = "arn:aws:eks:eu-west-3:412215358438:cluster/eks-iso-01"
+context_alias = "eks-iso-01"
+
+[[kubernetes.contexts]]
+context_pattern = "arn:aws:eks:eu-west-3:207567790576:cluster/eks-prod-01"
+context_alias = "eks-prod-01"
 
 [lua]
 symbol = " "
@@ -158,10 +175,6 @@ Unknown = " "
 Void = " "
 Windows = "󰍲 "
 
-[terraform]
-symbol = "terraform"
-format = 'via [$symbol]($style) '
-
 [package]
 symbol = "󰏗 "
 
@@ -194,6 +207,10 @@ disabled = true
 
 [swift]
 symbol = " "
+
+[terraform]
+symbol = "terraform"
+format = 'via [$symbol]($style) '
 
 [username]
 show_always = true
