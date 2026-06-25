@@ -1,6 +1,8 @@
 #!/bin/bash
 
+script_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+
 while true; do
     sleep 10m
-    ./next_wallpaper.sh
+    "$script_dir/next_wallpaper.sh"
 done

@@ -15,7 +15,6 @@
 @define-color peach rgb(250, 179, 135);
 
 @define-color bg-black-transparent rgba(30, 30, 46, 0.95);
-@define-color bg-black-transparent-main rgba(30, 30, 46, 0.75);
 @define-color workspaces-button-bg-inactive rgba(180, 190, 254, 0.25);
 @define-color workspaces-button-bg-active rgba(180, 190, 254, 0.5);
 @define-color workspaces-button-bg-urgent rgba(243, 139, 168, 0.5);
@@ -33,7 +32,7 @@
 }
 
 window#waybar {
-  background-color: @bg-black-transparent-main;
+  background-color: @bg-black-transparent;
   color: @text;
 }
 
